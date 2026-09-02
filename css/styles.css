@@ -1,0 +1,79 @@
+/* ==========================
+   1. RESET
+   ========================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================
+   2. DESIGN TOKENS
+   ========================== */
+
+:root {
+    /* Color */
+    --color-bg: #fafafa;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-accent: #0369a1;
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Typography */
+    --text-base: 1rem;
+    --text-h3: 1.25rem;
+    --text-h2: 1.5rem;
+    --text-h1: 2.25rem;
+    --leading-body: 1.6;
+    --leading-heading: 1.2;
+
+    /* Layout */
+    --page-width: 64rem;
+    --reading-width: 70ch;
+}
+
+
+
+/* ==========================
+   3. BASE ELEMENT STYLES
+   ========================== */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+}
+
+h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
+h2 { font-size: var(--text-h2); line-height: var(--leading-heading); }
+h3 { font-size: var(--text-h3); line-height: var(--leading-heading); }
+
+h1, h2, h3 { margin-bottom: var(--space-sm);}
+p { margin-bottom: var(--space-md); }
+p:last-child {margin-bottom: 0;}
+
+a { color: var(--color-accent); }
+
+/* ==========================
+   4. LAYOUT
+   ========================== */
+body {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+}
