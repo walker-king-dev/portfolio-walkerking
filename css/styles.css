@@ -47,12 +47,18 @@ img {
     --reading-width: 70ch;
 }
 
-
+:root {
+    /* ...existing tokens... */
+    --font-stack: system-ui, 'Segoe UI', 'Tahoma', 'sans-serif';
+    --color-surface-alt: #f1f5f9;
+    --radius-md: 8px;
+}
 
 /* ==========================
    3. BASE ELEMENT STYLES
    ========================== */
 body {
+    font-family: var(--font-stack);
     background-color: var(--color-bg);
     color: var(--color-text);
     font-size: var(--text-base);
@@ -72,6 +78,40 @@ a { color: var(--color-accent); }
 /* ==========================
    4. LAYOUT
    ========================== */
+header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: var(--color-surface-alt);
+    margin-bottom: var(--space-lg);
+}
+.header-text { flex: 1; }
+.header-pic {
+    flex: 1;
+    background-color: var(--color-surface);
+    min-height: 18rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted);
+}
+
+nav {
+    padding: var(--space-md) 0;
+}
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-right: var(--space-lg);
+}
+nav a:hover { color: var(--color-accent); }
+
+section { margin-bottom: var(--space-xl); }
+
+
+
 body {
     max-width: var(--page-width);
     margin: 0 auto;
